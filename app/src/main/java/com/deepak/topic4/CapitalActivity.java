@@ -22,9 +22,13 @@ public class CapitalActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
 
         if (bundle!=null){
+            //Get vaule from main activity with the help of message "mszCapital" & "mszCountry"
             String capital = bundle.getString("mszCapital");
             String country = bundle.getString("mszCountry");
+
             //String result = "The capital city of "+ country + " is "+ capital;
+
+            //Display result to Capital Activity page
             tvCapital.setText(Html.fromHtml("The capital city of <b><i>"+ country + "</i></b> is <b> <i>"+ capital + "</i></b>."));
         }
         else {

@@ -16,6 +16,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
+    //Add value in array
     public static final String countries[] = {
             "Nepal","Kathmandu",
             "India","Delhi",
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             "Canada","Ottawa"
     };
 
+    //Mapping the array data data
     private Map<String,String> dictionary;
 
     @Override
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         ListView lstcountries = findViewById(R.id.lstcountries);
 
 
-
+        //Hashmapping
         dictionary = new HashMap<>();
 
         for(int i=0;i<countries.length;i+=2){
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+        //Arrayadapter to display the array countries value
         ArrayAdapter countryAdapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,
@@ -52,16 +55,21 @@ public class MainActivity extends AppCompatActivity {
         lstcountries.setAdapter(countryAdapter);
 
 
-
+        //Pass the capital of country to Capital Activity
         lstcountries.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //To represent which country the user has been click
                 String country = parent.getItemAtPosition(position).toString();
+
+                //Get hashmap data from dictionary variable from above
                 String capital = dictionary.get(country);
 
               //Toast.makeText(getApplicationContext(),capital.toString(),Toast.LENGTH_LONG).show();
 
                 Intent intent = new Intent(MainActivity.this, CapitalActivity.class);
+
+                //Send the value of capital and country through the name: "mszCapital" & "mszCountry"
                 intent.putExtra("mszCapital", capital);
                 intent.putExtra("mszCountry", country);
                 startActivity(intent);
