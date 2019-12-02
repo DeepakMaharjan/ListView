@@ -10,14 +10,14 @@
 
     <style name="app_name">Dictionary</style>
 
-    <string-array name="countries">
-        <item>Nepal</item>
-        <item>India</item>
-        <item>China</item>
-        <item>US</item>
-        <item>UK</item>
-        <item>Canada</item>
-    </string-array>
+<!--    <string-array name="countries">-->
+<!--        <item>Nepal</item>-->
+<!--        <item>India</item>-->
+<!--        <item>China</item>-->
+<!--        <item>US</item>-->
+<!--        <item>UK</item>-->
+<!--        <item>Canada</item>-->
+<!--    </string-array>-->
 
 
 </resources>

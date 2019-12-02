@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="#36B455"
     tools:context=".CapitalActivity">
 
     <TextView

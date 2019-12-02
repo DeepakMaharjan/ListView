@@ -43,12 +43,15 @@ public class MainActivity extends AppCompatActivity {
             dictionary.put(countries[i],countries[i+1]);
         }
 
+
         ArrayAdapter countryAdapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,
                 new ArrayList<String>(dictionary.keySet())
         );
         lstcountries.setAdapter(countryAdapter);
+
+
 
         lstcountries.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
